@@ -44,7 +44,7 @@ local function getcustomassetfunc(path)
             setthreadidentity(2)
 		end)
 		local req = requestfunc({
-			Url = "https://raw.githubusercontent.com/7GrandDadPGN/personalscripts/main/RobloxBedwarsMinecraft/"..path,
+            Url = "https://raw.githubusercontent.com/fuzzybuzzyboy/test/main/"..path,
 			Method = "GET"
 		})
 		writefile(path, req.Body)
@@ -75,7 +75,7 @@ end
 
 local function downloadassets(path2)
     local json = requestfunc({
-        Url = "https://api.github.com/repos/7GrandDadPGN/personalscripts/contents/RobloxBedwarsMinecraft/"..path2,
+        Url = "https://api.github.com/repos/fuzzybuzzyboy/test/contents/"..path2,
         Method = "GET"
     })
     local decodedjson = game:GetService("HttpService"):JSONDecode(json.Body)
